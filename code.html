@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Muthuraj | Premium Web &amp; Automation Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus_Jakarta_Sans:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#dae2fd",
+                        "surface-container-highest": "#d5e3fc",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#5c647a",
+                        "secondary-container": "#dae2fd",
+                        "secondary": "#565e74",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "surface": "#f8f9ff",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#dde1ff",
+                        "on-background": "#0d1c2e",
+                        "on-secondary-fixed": "#131b2e",
+                        "outline": "#737686",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-tertiary-fixed-variant": "#173bab",
+                        "on-tertiary-container": "#eff0ff",
+                        "on-primary-container": "#eeefff",
+                        "background": "#f8f9ff",
+                        "surface-container": "#e6eeff",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary-fixed-dim": "#b8c4ff",
+                        "on-tertiary-fixed": "#001453",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#d5e3fc",
+                        "surface-dim": "#ccdbf3",
+                        "inverse-primary": "#b4c5ff",
+                        "inverse-surface": "#233144",
+                        "tertiary-container": "#4865d4",
+                        "error": "#ba1a1a",
+                        "tertiary": "#2c4bb9",
+                        "outline-variant": "#c3c6d7",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-container-high": "#dce9ff",
+                        "on-primary-fixed": "#00174b",
+                        "surface-container-low": "#eff4ff",
+                        "surface-bright": "#f8f9ff",
+                        "on-surface": "#0d1c2e",
+                        "primary": "#004ac6",
+                        "surface-tint": "#0053db",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#2563eb",
+                        "on-surface-variant": "#434655"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "section-gap": "100px",
+                        "margin-edge": "40px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "h3": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["0.7rem", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "h2": ["2.5rem", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                        "h3": ["1.75rem", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["1rem", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "h1": ["3.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-md": ["0.9375rem", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-surface {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .gradient-primary {
+            background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+        }
+        .shadow-premium {
+            box-shadow: 0 15px 20px -5px rgba(0,0,0,0.05);
+        }
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .perspective-lg {
+            perspective: 1000px;
+        }
+        .rotate-x-12 {
+            transform: rotateX(10deg) rotateY(-8deg) rotateZ(1deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 w-full z-[100] bg-white/70 backdrop-blur-xl border-b border-slate-200/50 shadow-sm">
+<nav class="flex justify-between items-center max-w-[1280px] mx-auto px-6 py-3">
+<div class="text-lg font-extrabold tracking-tighter text-slate-900">Muthuraj</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-['Plus_Jakarta_Sans'] text-xs font-semibold tracking-wide text-slate-600 hover:text-blue-600 transition-all" href="#services">Services</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs font-semibold tracking-wide text-slate-600 hover:text-blue-600 transition-all" href="#projects">Projects</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs font-semibold tracking-wide text-slate-600 hover:text-blue-600 transition-all" href="#process">Process</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs font-semibold tracking-wide text-slate-600 hover:text-blue-600 transition-all" href="#about">About</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs font-semibold tracking-wide text-slate-600 hover:text-blue-600 transition-all" href="#contact">Contact</a>
+<button class="gradient-primary text-white px-5 py-2 rounded-lg text-sm font-semibold hover:scale-105 active:scale-95 transition-transform shadow-md">Start a Project</button>
+</div>
+<button class="md:hidden p-1.5">
+<span class="material-symbols-outlined text-xl">menu</span>
+</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section id="hero" role="region" aria-label="Hero" class="py-[section-gap] min-h-screen flex items-center overflow-hidden">
+<!-- Dynamic Background Ornaments -->
+<div class="absolute top-[-5%] left-[-5%] w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] -z-10 animate-pulse"></div>
+<div class="absolute bottom-[-5%] right-[-5%] w-[400px] h-[400px] bg-tertiary/10 rounded-full blur-[90px] -z-10"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-full bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.02)_0%,transparent_70%)] -z-10"></div>
+<div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+<div class="space-y-6 relative z-20">
+<div class="inline-flex items-center gap-2 font-label-caps text-[0.65rem] text-primary px-4 py-1.5 bg-primary/10 rounded-full border border-primary/20">
+<span class="relative flex h-1.5 w-1.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary"></span>
+</span>
+                        AVAILABLE FOR NEW PROJECTS
+                    </div>
+<h1 class="font-h1 text-[3rem] lg:text-[4rem] text-on-background leading-[1] tracking-tight font-extrabold">
+                        Websites &amp; <br/>
+<span class="text-primary italic">Automation</span> <br/>
+                        That Help <span class="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">Grow</span>
+</h1>
+<p class="font-body-lg text-lg text-on-surface-variant max-w-md leading-relaxed">
+                        I’m Muthuraj, a freelance web developer building modern websites, catalog systems, and simple automation solutions for small businesses.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-2">
+<button class="gradient-primary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:shadow-xl hover:shadow-primary/30 transition-all hover:-translate-y-0.5 active:scale-95 glow-hover">Start a Project</button>
+<button class="bg-white border-2 border-slate-200 text-on-surface px-8 py-3.5 rounded-xl font-bold text-base hover:border-primary hover:text-primary transition-all hover:-translate-y-0.5 active:scale-95 shadow-sm">View Projects</button>
+</div>
+</div>
+<!-- Immersive 3D Layout -->
+<div class="relative hidden lg:block perspective-lg">
+<div class="relative z-10 rotate-x-12 animate-float scale-90">
+<!-- Main Card -->
+<div class="bg-white/80 backdrop-blur-2xl p-1 rounded-[2rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)] border border-white/50">
+<img alt="Tech Dashboard" class="rounded-[1.8rem] w-full aspect-[4/3] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6YTNAFolEPtbXl1SP4JFWC99ZWkhLoAedoDeDPVV538d1qucprnR8AJlEtLLkQucQRLjhUFIODBlL8LH_XWWsAyReSaRXW3uoPTb4qwXteXzOgqWqzF2RlHn4CNtLRaaSNNapP86tsCIQDOlYanSkpM7Hr6vqBJA-QRNaPj-leAy5Vz4dMwKN1TKFJ4wQWj9FbYn1D5HxZSBzLVoblW-Nu_ZD-rtH8P3i_F7vFt4EHgjGnX833rqMM65FhCKp975mBTm4HhlZNwVB"/>
+</div>
+<!-- Floating Overlapping Elements -->
+<div class="absolute -top-8 -right-8 glass-surface p-4 rounded-2xl shadow-premium border border-white/60 w-40 hover-lift cursor-default group">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-xl" data-weight="fill">smart_toy</span>
+</div>
+<h4 class="font-bold text-sm text-slate-900">Automation</h4>
+<p class="text-[10px] text-on-surface-variant">AI-Powered Flow</p>
+</div>
+<div class="absolute -bottom-10 -left-8 glass-surface p-4 rounded-2xl shadow-premium border border-white/60 w-48 hover-lift cursor-default group">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-green-500 text-base" data-weight="fill">check_circle</span>
+<span class="text-xs font-bold">Project Live</span>
+</div>
+<div class="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+<p class="text-[9px] mt-1.5 font-semibold text-on-surface-variant uppercase tracking-wider">Conversion rate: +42%</p>
+</div>
+</div>
+<!-- Background Shadow Element -->
+<div class="absolute -inset-6 bg-primary/5 rounded-[3rem] -z-10 rotate-3 translate-y-8 blur-2xl"></div>
+</div>
+</div>
+
+</section>
+<!-- New About Section -->
+<section id="about" role="region" aria-label="About" class="py-[section-gap] min-h-screen flex items-center bg-white relative">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<!-- Left Column: Portrait -->
+<div class="relative max-w-sm mx-auto lg:mx-0">
+<div class="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-slate-100 relative z-10 shadow-xl">
+    <img alt="Muthuraj - Web Developer" class="w-full h-full object-cover" src="assets/profile.png"/>
+</div>
+<!-- Decorative Frame -->
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-primary rounded-tl-[1.5rem] -z-10"></div>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-primary/20 rounded-br-[1.5rem] -z-10"></div>
+<!-- Floating Stat Card -->
+<div class="absolute bottom-10 -right-6 glass-surface p-4 rounded-xl shadow-premium border border-white/50 z-20 hidden md:block">
+<p class="text-3xl font-extrabold text-primary mb-0.5">50+</p>
+<p class="text-xs font-bold text-slate-900">Projects Delivered</p>
+<p class="text-[10px] text-on-surface-variant">Quality Guaranteed</p>
+</div>
+</div>
+<!-- Right Column: Narrative & Stats Cards -->
+<div class="space-y-8">
+<div class="space-y-4">
+<span class="font-label-caps text-[0.65rem] text-primary tracking-widest">ABOUT MUTHURAJ</span>
+<h2 class="font-h2 text-h2 text-on-background leading-tight">Empowering Small Businesses through Tech.</h2>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+                                I’m Muthuraj, a freelance web developer and automation specialist dedicated to helping small businesses scale. I combine technical precision with creative strategy.
+                            </p>
+</div>
+<!-- Integrated Stats Cards -->
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface p-4 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center hover:border-primary/40 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-2">code</span>
+<p class="font-bold text-xs">Freelance Dev</p>
+</div>
+<div class="bg-surface p-4 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center hover:border-primary/40 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-2">bolt</span>
+<p class="font-bold text-xs">Automation</p>
+</div>
+<div class="bg-surface p-4 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center hover:border-primary/40 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-2">schedule</span>
+<p class="font-bold text-xs">Fast Delivery</p>
+</div>
+<div class="bg-surface p-4 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center hover:border-primary/40 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-2">smartphone</span>
+<p class="font-bold text-xs">Mobile-First</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" role="region" aria-label="Services" class="py-[section-gap] min-h-screen flex items-center bg-surface">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="text-center max-w-xl mx-auto mb-14">
+<h2 class="font-h2 text-h2 mb-3">Specialized Solutions</h2>
+<p class="text-on-surface-variant text-sm">Focus on what you do best while I handle the digital engine powering your growth.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<!-- Service 1 -->
+<div class="bg-white p-8 rounded-2xl shadow-premium border border-outline-variant/10 hover-lift">
+<div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">brush</span>
+</div>
+<h3 class="text-lg font-bold mb-3">Custom Website Design</h3>
+<p class="text-on-surface-variant text-sm mb-2">Bespoke websites tailored to your brand identity, optimized for speed and conversion.</p>
+</div>
+<!-- Service 2 -->
+<div class="bg-white p-8 rounded-2xl shadow-premium border border-outline-variant/10 hover-lift">
+<div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">restaurant</span>
+</div>
+<h3 class="text-lg font-bold mb-3">Restaurant Websites</h3>
+<p class="text-on-surface-variant text-sm mb-2">Interactive menus, online booking, and local SEO to bring customers to your doorstep.</p>
+</div>
+<!-- Service 3 -->
+<div class="bg-white p-8 rounded-2xl shadow-premium border border-outline-variant/10 hover-lift">
+<div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
+</div>
+<h3 class="text-lg font-bold mb-3">WhatsApp Catalogs</h3>
+<p class="text-on-surface-variant text-sm mb-2">Enable customers to browse products and send orders directly to your WhatsApp.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section id="projects" role="region" aria-label="Projects" class="py-[section-gap] min-h-screen flex items-center bg-white">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="flex justify-between items-end mb-10">
+<div class="max-w-lg">
+<h2 class="font-h2 text-h2 mb-3">Selected Work</h2>
+<p class="text-on-surface-variant text-sm">Projects that solved real problems and delivered results.</p>
+</div>
+<button class="hidden md:flex items-center gap-1.5 text-sm font-bold text-primary hover:gap-3 transition-all">
+                        Explore All <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] bg-slate-100 mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A premium restaurant website interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoqorkQKzwgDnhZTJmnBqGoJvoibRTzKUQMuHUWGTyhYXRtCtHPvkTMfHxOP_hlsxYrYEX131StNcLSdqTLezZmcRefsUOPstRYydKTLrykMt1sfxX7QwRHbV2-gbS08DsGwUSNQzboC4W78jGWMYT811cMb0IekWjBjNJnm0YJ_E286vUCzw5TcHlUGK6FYdFq-17taQlf6cy-rjiw6nWXXGdMnr0vMjRNA79mUDGhZ39XfTKDwf8iaDyTWJOdX3FApOoF2aRZAsM"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+</div>
+<div class="flex flex-wrap gap-2 mb-3">
+<span class="text-[0.65rem] font-bold px-2.5 py-1 bg-surface-container rounded-full text-primary">Web Design</span>
+<span class="text-[0.65rem] font-bold px-2.5 py-1 bg-surface-container rounded-full text-primary">Restaurant</span>
+</div>
+<h3 class="font-h3 text-xl mb-1.5">Modern Dining Experience</h3>
+<p class="text-on-surface-variant text-sm mb-3">Full website design with integrated reservation system and digital menu.</p>
+<button class="font-bold text-xs flex items-center gap-1.5 text-primary group-hover:translate-x-1.5 transition-transform">
+                            View Project <span class="material-symbols-outlined text-xs">open_in_new</span>
+</button>
+</div>
+<!-- Project 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] bg-slate-100 mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Mobile interface for WhatsApp catalog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsxgCGvrdr1-UOPKFqMDznZQhEsrf-KpoxI5fWpbRe1pC-wAdiWn5xeQGphTem4De2I8DAsTZ30UZ7aVn7howelDzyNc-6SiZ3fVepIh8z1d7EgPxbyLwy-VHssBbF7ZTG-uYP8OUiJg8DxxsZkxqvxaVp_x5J7F_mEJA_lz2baqfni_CGD9YaRnkfPjZ9h_-vBGwd6ZD6fy57ZEsQ9VlEcNd9q7YDNXg7shr5cVA6Bi6gm4adXqD7LLHaOiXqk4h-dA8RBL_SlDRf"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+</div>
+<div class="flex flex-wrap gap-2 mb-3">
+<span class="text-[0.65rem] font-bold px-2.5 py-1 bg-surface-container rounded-full text-primary">E-commerce</span>
+<span class="text-[0.65rem] font-bold px-2.5 py-1 bg-surface-container rounded-full text-primary">WhatsApp API</span>
+</div>
+<h3 class="font-h3 text-xl mb-1.5">Catalog to WhatsApp System</h3>
+<p class="text-on-surface-variant text-sm mb-3">Optimized catalog website that sends user carts to business owners on WhatsApp.</p>
+<button class="font-bold text-xs flex items-center gap-1.5 text-primary group-hover:translate-x-1.5 transition-transform">
+                            View Project <span class="material-symbols-outlined text-xs">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section id="process" role="region" aria-label="Process" class="py-[section-gap] min-h-screen flex items-center bg-surface overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-6 relative">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 mb-3">Simple Process</h2>
+<p class="text-on-surface-variant text-sm">How we take your idea from concept to a living digital asset.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
+<!-- Progress Line (Desktop) -->
+<div class="absolute top-10 left-0 w-full h-[1px] bg-primary/10 -z-10 hidden md:block"></div>
+<!-- Step 1 -->
+<div class="space-y-4 text-center">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto shadow-premium border-2 border-surface border-t-primary border-r-primary">
+<span class="font-bold text-primary">01</span>
+</div>
+<h4 class="font-bold text-base">Discuss</h4>
+<p class="text-on-surface-variant text-[0.8rem] px-2">We deep dive into your goals and audience.</p>
+</div>
+<!-- Step 2 -->
+<div class="space-y-4 text-center">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto shadow-premium border-2 border-surface border-t-primary border-r-primary">
+<span class="font-bold text-primary">02</span>
+</div>
+<h4 class="font-bold text-base">Design</h4>
+<p class="text-on-surface-variant text-[0.8rem] px-2">Visualizing the solution with modern mockups.</p>
+</div>
+<!-- Step 3 -->
+<div class="space-y-4 text-center">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto shadow-premium border-2 border-surface border-t-primary border-r-primary">
+<span class="font-bold text-primary">03</span>
+</div>
+<h4 class="font-bold text-base">Build</h4>
+<p class="text-on-surface-variant text-[0.8rem] px-2">Clean coding and robust automation setup.</p>
+</div>
+<!-- Step 4 -->
+<div class="space-y-4 text-center">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto shadow-premium border-2 border-surface border-t-primary border-r-primary">
+<span class="font-bold text-primary">04</span>
+</div>
+<h4 class="font-bold text-base">Launch</h4>
+<p class="text-on-surface-variant text-[0.8rem] px-2">Deployment and ongoing support.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA & Contact -->
+<section id="contact" role="region" aria-label="Contact" class="py-[section-gap] min-h-screen flex items-center relative overflow-hidden">
+<div class="absolute inset-0 bg-slate-950 -z-20"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/20 rounded-full blur-[140px] -z-10"></div>
+<div class="max-w-[1280px] mx-auto px-6 text-center text-white">
+<h2 class="font-h1 text-[3.5rem] mb-6">Have an idea?<br/>Let’s build it.</h2>
+<div class="flex flex-wrap justify-center gap-4 mb-14">
+<a class="flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-slate-950 font-bold text-lg hover:scale-105 active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-weight="fill">chat</span> WhatsApp
+                    </a>
+<a class="flex items-center gap-2 px-8 py-4 rounded-xl bg-white/10 text-white font-bold text-lg backdrop-blur-md hover:bg-white/20 transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span> Email Me
+                    </a>
+</div>
+<div class="max-w-2xl mx-auto p-10 rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl">
+<p class="text-xl font-bold mb-6">Ready to transform your business?</p>
+<button class="gradient-primary px-10 py-4 rounded-xl font-bold text-xl hover:shadow-[0_0_40px_-10px_rgba(37,99,235,0.4)] transition-all">
+                        Contact Now
+                    </button>
+<div class="flex justify-center gap-6 mt-8 opacity-60 text-sm">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">Dribbble</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 w-full relative overflow-hidden border-t border-slate-900">
+<div class="max-w-[1280px] mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-xl font-black text-white tracking-tighter">Muthuraj</div>
+<div class="flex gap-6">
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-400 hover:text-blue-400 transition-colors" href="#services">Services</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-400 hover:text-blue-400 transition-colors" href="#projects">Projects</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-400 hover:text-blue-400 transition-colors" href="#process">Process</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-400 hover:text-blue-400 transition-colors" href="#contact">Contact</a>
+</div>
+<p class="font-['Plus_Jakarta_Sans'] text-xs text-slate-400">© 2024 Muthuraj. Precision Web &amp; Automation.</p>
+</div>
+</footer>
+<style>
+        @keyframes scroll {
+            0% { transform: translateY(-100%); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(200%); opacity: 0; }
+        }
+    </style>
+</body></html>
